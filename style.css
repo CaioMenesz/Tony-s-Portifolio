@@ -26,6 +26,12 @@
 
     --paragraph: 
         #7e90a0;
+
+    --bgTime:
+        #ebebeb;
+    
+    --line:
+        #ddd;
 }
 
 /* ----------- UP BAR STYLES ---------- */
@@ -37,6 +43,12 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 100px;
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 .up-bar span {
@@ -51,7 +63,7 @@
     align-items: center;
 }
 
-.nav-links li {
+.nav-links li a {
     color: var(--oceanAccent);
     cursor: pointer;
 }
@@ -82,7 +94,7 @@
 }
 
 .content-info {
-    width: 40ch;
+    width: 70ch;
 }
 
 .content-info h1 {
@@ -97,19 +109,15 @@
 .content-image img {
     width: 500px;
     border-radius: 20px;
+    box-shadow: 20px 20px var(--oceanAccent);
 }
 
 /* ---------- TECHNOLOGIES STYLES ---------- */
-.technologies video {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.content-technologies {
+.technologies {
     position: relative;
-    top: -450px;
-    left: 300px;
+    height: 100%; /* You can set your desired height */
+    overflow: hidden;
+    margin-bottom: 100px;
 }
 
 .logos-tech {
@@ -118,10 +126,167 @@
     gap: 20px;
 }
 
-.logos-tech img {
-    width: 40px;
-    padding: 10px 15px;
+.logos-tech .fa-brands {
+    font-size: 40px;
+    padding: 20px;
     border-radius: 10px;
-    fill: var(--lightColor);
-    background: var(--oceanAccent);
+    color: var(--oceanAccent);
+    background: var(--sample);
+    transition: 1s;
 }
+
+.logos-tech .fa-brands:hover {
+    border-radius: 100%;
+    color: #000;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.content-technologies {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    color: white;
+    top: 50%;
+}
+
+.connection p {
+    font-size: 2rem;
+}
+
+.be-into {
+    width: 450px;
+    padding: 30px;
+    border-radius: 20px;
+    background: var(--sample);
+}
+
+.be-into h1 {
+    font-size: 1rem;
+    color: var(--oceanAccent);
+    margin-bottom: 15px;
+}
+
+.list-road {
+    list-style: none;
+    color: var(--paragraph);
+}
+
+/* ---------- PORTIFOLIO ---------- */
+
+#portfolio {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+  
+.project {
+    background-color: var(--sample);
+    border: 1.5px solid var(--line);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px rgba(54, 73, 88, .3);
+}
+  
+.project h2 {
+    margin-top: 0;
+}
+  
+.project p {
+    margin-bottom: 10px;
+}
+  
+.project a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: #eee;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 300px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 30px;
+    background: linear-gradient(var(--oceanAccent), var(--paragraph));
+}
+
+.time-concluded {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1.2px solid var(--line);
+    box-shadow: 4px 4px rgba(54, 73, 88, .3);
+    border-radius: 10px;
+}
+
+.time-concluded p {
+    padding: 0 100px 0 20px;
+}
+
+.time-concluded img {
+    width: 24px;
+    color: var(--oceanAccent);
+}
+
+.time-concluded p {
+    color: var(--oceanAccent);
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+  
+.contact h2 {
+    color: var(--oceanAccent);
+}
+
+.contact p {
+    color: var(--paragraph);
+}
+  
+.contact-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+  
+.contact-links a {
+    text-decoration: none;
+    color: #333;
+    background-color: #eee;
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+/* ---------- CONTACT-FORM ---------- */
